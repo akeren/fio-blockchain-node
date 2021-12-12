@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  fio-blockchain-node:
+    container_name: fio-blockchain-node
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fio/blockchain-node
+    ports:
+      - 8888:8888
+      - 3856:3856
+    volumes:
+      - /var/lib/fio:/data
